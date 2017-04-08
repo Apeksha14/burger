@@ -1,0 +1,5 @@
+INSERT INTO burgers VALUES();
+
+INSERT INTO burgers VALUES();
+
+INSERT INTO burgers VALUES();
