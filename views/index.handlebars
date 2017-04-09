@@ -1,21 +1,23 @@
 <h1>EAT DA BURGER!</h1>
-
-<center><img id="burger" src="http://01.gatag.net/img/201506/24l/gatag-00008284.jpg"></center>
+<br>
+<center><img id="burgerimg" src="/assets/images/burger-flat.png"></center>
 
 <div class="main">
 
 <div class="notdevoured">
 
 <h2>Burgers that are not devoured!</h2>
-
+<br>
 <ul>
   {{#each burgers}}
     {{#unless this.devoured}}
       <li>
-       {{this.burger_name}}
+        
+        {{this.burger_name}}
+
         <form id="myform"  action="burger/update/{{this.id}}?_method=PUT" method="POST">
           <input type="hidden" name="devoured" value="true">
-          <button type="submit">DEVOUR!</button>
+          <button class="myButton1" type="submit">DEVOUR!</button>
         </form>
       </li>
     {{/unless}}
@@ -27,7 +29,7 @@
 <div class="devoured">
 
 <h2>Burgers that are devoured!</h2>
-
+<br>
 <ul>
   {{#each burgers}}
     {{#if this.devoured}}
@@ -40,18 +42,20 @@
     {{/if}}
   {{/each}}
 </ul>
+
 </div>
 </div>
 <br><br>
+
 <div class="addburgerdiv">
 <h2>Add a Burger</h2>
 <form class="create-update-form" action="burger/create" method="POST">
+  <br>
 
   <div class="form-group">
     <label for="ca">Burger Name:</label>
     <input type="text" id="ca" name="name">
   </div>
-
   <div class="form-group">
     <input type="hidden" name="devoured" value="0">
   </div>
