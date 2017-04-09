@@ -10,6 +10,3 @@ CREATE TABLE burgers(
 	date TIMESTAMP,
 	PRIMARY KEY (id)
 );
-
-
-)
